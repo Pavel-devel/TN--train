@@ -1,26 +1,26 @@
 class Station
 attr_accessor :train 
-attr_reader :trains_at_st
+attr_reader :trains_at_station
 
   def initialize(name)
     @name = name
-    @trains_at_st = []
+    @trains_at_station = []
   end
   
   def add_to_st(train)
-    @trains_at_st << train 		
+    @trains_at_station << train 		
   end
   
-  def show_trains_at_st
-    @trains_at_st.each { |train| train }		
+  def show_trains_at_station
+    @trains_at_station.each { |train| train }		
   end
   
   def trains_type_size(type)
-    @trains_at_st.select { |train| train.type == type }.size
+    @trains_at_station.select { |train| train.type == type }.size
   end
 
-  def del(train)
-    @trains_at_st.delete(train)
+  def delete(train)
+    @trains_at_station.delete(train)
   end
 end 
 
@@ -50,7 +50,7 @@ end
 
 class Train
 attr_accessor :speed
-attr_reader :sum_wag, :current_station, :type
+attr_reader :current_station, :type
 
   def initialize(number, type, wagons, route, speed = 0)
     @number = number
