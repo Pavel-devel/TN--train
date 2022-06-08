@@ -31,13 +31,15 @@ class Train
 
   def assign_a_route(route)
     @index_station = 0
-    self.route = route
-    current_station = route.station_all[@index_station]
+    @route = route
+    current_station = @route.station_all[@index_station]
     current_station.plus_train(self)
   end
 
   def current_station
-    route.station_all[@index_station]
+    puts "ssdds" if @route.nil?
+
+    @route.station_all[@index_station]
   end
 
   def next_station

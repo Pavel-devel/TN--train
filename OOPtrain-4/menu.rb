@@ -48,7 +48,7 @@ class Menu
         when 7 then send(:add_wagon)
         when 8 then send(:delete_wagon)
         when 9 then send(:next_back)
-        when 10 then send(:curret)
+        when 10 then send(:current)
         when 11 then send(:start)
         when 12
           puts "\nEnd of the program"
@@ -185,7 +185,10 @@ class Menu
     end
   end
 
-  def curret
-    puts @train.current_station
+  def current
+    @station.each_with_index do |st, i|
+      puts "#{i}) --- #{st.name}"
+      puts "Train's list --- #{st.show_all_train}"
+    end 
   end
 end

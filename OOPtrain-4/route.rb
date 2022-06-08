@@ -16,7 +16,7 @@ class Route
     @station_all.delete(station)
   end
 
-  private # в интерфейсе не задан
+  private # not set in the interface
 
   attr_accessor :primary, :final
 

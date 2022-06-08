@@ -14,6 +14,11 @@ class Station
     @train.delete(train)
   end
 
+  def show_all_train
+    @train.each { |train| puts train }
+  end
+  
+
   private #Not set in the interface
 
   def type_train(type)
