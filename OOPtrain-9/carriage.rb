@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Carriage
-  include Validate
+  include Validation
   include Manufacturer
   attr_reader :type, :number_carriage, :volume, :occupied_volume
 

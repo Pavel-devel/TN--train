@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require_relative 'accessor'
 class Station
   include Validation
   include InstanceCounter

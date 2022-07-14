@@ -11,9 +11,9 @@ class Train
 
   @@trains = []
 
-  NUMBER_TRAIN_FORMAT = /^[a-z\d]{3}-*[a-z\d]{2}$/.freeze
+  NUMBER_TRAIN_FORMAT = /^[a-z\d]{3}-*[a-z\d]{2}$/i.freeze
 
-  validate :name, :format, NUMBER_TRAIN_FORMAT
+  validate :number, :format, NUMBER_TRAIN_FORMAT
 
   def self.find(number)
     @@trains.each { |train| train.number == number }
