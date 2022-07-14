@@ -7,7 +7,7 @@ module Validation
   end
 
   module ClassMethods
-    def validate(_number, type, *param)
+    def validate(name, type, *param)
       @validations ||= []
       @validations << { name: name, type: type, param: param }
     end
